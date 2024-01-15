@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="cars" id="mySelect">
+      <option value="maruti">Maruti</option>
+      <option value="audi">Audi</option>
+      <option value="bugatti">Bugatti</option>
+      <option value="ferrari">Ferrari</option>
+      <option value="rolls-royce">Rolls Royce</option>
+    </select>
+    <div id="selectedFruit"></div>
+    <script>
+      // Get the select element
+      var selectElement = document.getElementById("mySelect");
+
+      // Get the span element to display the selected fruit
+      var selectedFruitSpan = document.getElementById("selectedFruit");
+      selectElement.addEventListener("change", function () {
+        // Get the selected option
+        var selectedOption = selectElement.options[selectElement.selectedIndex];
+
+        // Display the selected fruit in the span element
+        selectedFruitSpan.textContent = selectedOption.text;
+      });
+    </script>
+  </body>
+</html>
